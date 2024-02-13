@@ -1,4 +1,4 @@
-## CollapsibleDatagridTwo
+## Collapsible Data grid 2
 Add-on for Data grid 2 rows to generate a chevron with more data. This widget
 focuses on collapsible content but does not adjust column responsiveness.
 
