@@ -1,0 +1,42 @@
+{
+    "name": "collapsibledatagridtwo",
+    "widgetName": "CollapsibleDatagridTwo",
+    "version": "1.0.0",
+    "description": "Add-on for Data grid 2 rows to generate a chevron with more data.",
+    "copyright": "2024 Incentro International B.V.",
+    "author": "Rob Duits",
+    "engines": {
+        "node": ">=16"
+    },
+    "license": "MIT",
+    "config": {
+        "projectPath": "../../",
+        "mendixHost": "http://localhost:8080",
+        "developmentPort": 3000
+    },
+    "packagePath": "incentro",
+    "scripts": {
+        "start": "pluggable-widgets-tools start:server",
+        "dev": "pluggable-widgets-tools start:web",
+        "build": "pluggable-widgets-tools build:web",
+        "lint": "pluggable-widgets-tools lint",
+        "lint:fix": "pluggable-widgets-tools lint:fix",
+        "prerelease": "npm run lint",
+        "release": "pluggable-widgets-tools release:web"
+    },
+    "devDependencies": {
+        "@mendix/pluggable-widgets-tools": "^10.5.0"
+    },
+    "dependencies": {
+        "classnames": "^2.2.6",
+        "dompurify": "^3.0.8"
+    },
+    "resolutions": {
+        "react": "18.2.0",
+        "react-native": "0.70.7"
+    },
+    "overrides": {
+        "react": "18.2.0",
+        "react-native": "0.70.7"
+    }
+}

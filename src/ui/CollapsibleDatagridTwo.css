@@ -1,0 +1,37 @@
+.collapsible-datagrid-preview {
+  background-color: white;
+  border: dashed 1px #ced0d3;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  padding: 8px;
+}
+
+.collapsible-datagrid-preview p {margin: 0;}
+
+.widget-datagrid .btn-td-collapse svg {
+    fill: currentColor;
+    pointer-events: none;
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+}
+
+.widget-datagrid .btn-td-collapse:hover {
+    cursor: pointer;
+}
+
+.widget-datagrid .btn-td-collapse--active svg {
+    transform: rotate(180deg);
+}
+
+.widget-datagrid .tr-collapsible {
+    background-color: var(--collapsible-datagrid2-background, #fafafa);
+    border-bottom: solid 1px var(--collapsible-datagrid2-border, #e8e8e8);
+    gap: var(--spacing-regular, 16px);
+    grid-column: 1 / -1;
+    padding: 15px var(--spacing-large, 24px);
+}
+
+.widget-datagrid .tr-collapsible:empty,
+.widget-datagrid .tr-collapsible--collapsed {
+    display: none;
+}
