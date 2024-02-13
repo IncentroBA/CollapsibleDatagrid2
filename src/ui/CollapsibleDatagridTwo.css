@@ -23,6 +23,12 @@
     transform: rotate(180deg);
 }
 
+.widget-datagrid .btn-td-collapse:hover,
+.widget-datagrid .btn-td-collapse:focus,
+.widget-datagrid .btn-td-collapse--active {
+    color: var(--brand-primary);
+}
+
 .widget-datagrid .tr-collapsible {
     background-color: var(--collapsible-datagrid2-background, #fafafa);
     border-bottom: solid 1px var(--collapsible-datagrid2-border, #e8e8e8);

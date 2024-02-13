@@ -1,7 +1,7 @@
 {
     "name": "collapsibledatagridtwo",
     "widgetName": "CollapsibleDatagridTwo",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Add-on for Data grid 2 rows to generate a chevron with more data.",
     "copyright": "2024 Incentro International B.V.",
     "author": "Rob Duits",
