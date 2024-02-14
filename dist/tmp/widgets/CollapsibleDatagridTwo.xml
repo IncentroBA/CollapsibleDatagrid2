@@ -5,8 +5,8 @@
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Collapsible Data grid 2</name>
     <description>Add-on for Data grid 2 rows to generate a chevron with more data.</description>
-    <studioProCategory>Data containers</studioProCategory>
-    <studioCategory>Data containers</studioCategory>
+    <studioProCategory>Add-ons</studioProCategory>
+    <studioCategory>Add-ons</studioCategory>
     <properties>
         <propertyGroup caption="General">
             <property key="contentWidgets" type="widgets" required="false">
