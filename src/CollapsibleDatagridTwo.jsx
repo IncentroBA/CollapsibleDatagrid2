@@ -1,29 +1,44 @@
 import "./ui/CollapsibleDatagridTwo.css";
 import { createElement, useEffect, useRef, useState } from "react";
 
-export function CollapsibleDatagridTwo({ closeOnClick, contentWidgets, ...rest }) {
+export function CollapsibleDatagridTwo({ closeOnClick, contentWidgets, openByBoolean, ...rest }) {
     const style = rest.class || "";
     const chevronRef = useRef(null);
     const collapsibleRef = useRef(null);
     const datagrid = useRef(null);
     const [chevronActive, setChevronActive] = useState(false);
     
-    function useOutsideAlerter(ref1, ref2) {
+    useEffect(() => {
+        if (!closeOnClick || !chevronActive) return;
+
         function handleClickOutside(event) {
-            if (ref1.current && !ref1.current.contains(event.target) && !ref2.current.contains(event.target)) {
+            const row = collapsibleRef.current?.closest('.tr');
+            
+            if (collapsibleRef.current && 
+            chevronRef.current && 
+            row && 
+            !collapsibleRef.current.contains(event.target) && 
+            !chevronRef.current.contains(event.target) && 
+            !row.contains(event.target)) {
                 setChevronActive(false);
+                openByBoolean?.setValue(false);
             }
         }
         
-        document.addEventListener("mouseup", handleClickOutside); // Bind the event listener
-        return () => document.removeEventListener("mouseup", handleClickOutside); // Unbind the event listener on clean up
-    }
+        document.addEventListener("mouseup", handleClickOutside);
+        return () => document.removeEventListener("mouseup", handleClickOutside);
+    }, [chevronActive, closeOnClick]);
     
-    function toggleTrCollapse() {
-        if (!chevronActive) {
-            closeOnClick && useOutsideAlerter(collapsibleRef, chevronRef);
+    function toggleTrCollapse(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        // Remove the useOutsideAlerter call
+        if (openByBoolean?.setValue) {
+            openByBoolean.setValue(!openByBoolean.value);
+        } else {
+            setChevronActive(!chevronActive);
         }
-        setChevronActive(!chevronActive);
     }
     
     useEffect(() => {
@@ -33,6 +48,12 @@ export function CollapsibleDatagridTwo({ closeOnClick, contentWidgets, ...rest }
             row.appendChild(collapsibleRef.current);
         }
     });
+
+    useEffect(() => { 
+        if (openByBoolean?.value !== undefined) {
+            setChevronActive(Boolean(openByBoolean.value));
+        }
+    }, [openByBoolean?.value]);
     
     return (
         <div>

@@ -17,6 +17,13 @@
                 <caption>Close on click outside</caption>
                 <description>Only 1 open at a time AND close when clicking outside of the collapsed content.</description>
             </property>
+            <property key="openByBoolean" type="attribute" required="false">
+                <caption>Open by Boolean</caption>
+                <description>Open the collapsible content based on boolean value</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>
+                </attributeTypes>
+            </property>
         </propertyGroup>
     </properties>
 </widget>

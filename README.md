@@ -8,12 +8,16 @@ Aside from this add-on, there is also a [Responsive Data grid 2](https://marketp
 
 When you have a Data grid 2 that should display additional information underneath each row. This could be any (pluggable) widget.
 
+## Features
+
+-   Open by Boolean `Attribute` to open / close based on attribute.
+-   Close on click outside `boolean`.
+
 ## Usage
 
 - Place the widget **inside** a custom content column of the Data grid 2. 
 - Insert any pluggable widget you want that contains more wanted information. This can be for example a button, input field or a List view widget.
-
-And that is all.
+- When using the Open by Boolean attribute it is best to nog commit the value when setting it.
 
 
 ## Development and contribution
