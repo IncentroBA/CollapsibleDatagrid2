@@ -24,6 +24,10 @@
                     <attributeType name="Boolean"/>
                 </attributeTypes>
             </property>
+            <property key="displayCompact" type="boolean" defaultValue="false">
+                <caption>Compact</caption>
+                <description>Change the spacing style to compact.</description>
+            </property>
         </propertyGroup>
     </properties>
 </widget>

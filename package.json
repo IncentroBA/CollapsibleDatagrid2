@@ -1,7 +1,7 @@
 {
   "name": "collapsibledatagridtwo",
   "widgetName": "CollapsibleDatagridTwo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add-on for Data grid 2 rows to generate a chevron with more data.",
   "copyright": "2025 Incentro International B.V.",
   "author": "Rob Duits",
@@ -25,11 +25,11 @@
     "release": "pluggable-widgets-tools release:web"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^10.5.0"
+    "@mendix/pluggable-widgets-tools": "^10.18.2"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "dompurify": "^3.0.8"
+    "classnames": "^2.5.1",
+    "dompurify": "^3.2.4"
   },
   "resolutions": {
     "react": "18.2.0",

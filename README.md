@@ -12,6 +12,7 @@ When you have a Data grid 2 that should display additional information underneat
 
 -   Open by Boolean `Attribute` to open / close based on attribute.
 -   Close on click outside `boolean`.
+-   Compact `boolean` to display the additional information with minimal spacing.
 
 ## Usage
 

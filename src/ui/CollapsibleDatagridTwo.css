@@ -1,11 +1,13 @@
 .collapsible-datagrid-preview {
-  border: dashed 1px #ced0d3;
-  border-radius: 4px;
-  margin-bottom: 24px;
-  padding: 8px;
+    border: dashed 1px #ced0d3;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    padding: 8px;
 }
 
-.collapsible-datagrid-preview p {margin: 0;}
+.collapsible-datagrid-preview p {
+    margin: 0;
+}
 
 .widget-datagrid .btn-td-collapse svg {
     fill: currentColor;
@@ -34,6 +36,10 @@
     gap: var(--spacing-regular, 16px);
     grid-column: 1 / -1;
     padding: 15px var(--spacing-large, 24px);
+}
+
+.widget-datagrid .tr-collapsible.tr-collapsible--compact {
+    padding: var(--spacing-smaller, 8px);
 }
 
 .widget-datagrid .tr-collapsible:empty,
